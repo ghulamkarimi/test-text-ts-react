@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 
 const App: React.FC = () => {
   const [text, setText] = useState("");
-  const vorbildText = "Eines sonnigen Morgens, als Jakob seine Schafe auf die saftigen Weiden führte, bemerkte er ein winziges, verängstigtes Kätzchen, das sich in einem Gebüsch versteckte. Das Kätzchen miaute ängstlich und schien verlassen zu sein. Jakob näherte sich dem Kätzchen vorsichtig und nahm es behutsam in seine Hände."
+  const vorbildText = "React ist eine JavaScript-Bibliothek."
 
   const handleTextAreaChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
     setText(e.target.value);
