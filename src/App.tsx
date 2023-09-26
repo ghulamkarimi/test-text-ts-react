@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 
 const App: React.FC = () => {
   const [text, setText] = useState("");
-  const vorbildText = "The text to the test."
+  const vorbildText = "Eines sonnigen Morgens, als Jakob seine Schafe auf die saftigen Weiden führte, bemerkte er ein winziges, verängstigtes Kätzchen, das sich in einem Gebüsch versteckte. Das Kätzchen miaute ängstlich und schien verlassen zu sein. Jakob näherte sich dem Kätzchen vorsichtig und nahm es behutsam in seine Hände."
 
   const handleTextAreaChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
     setText(e.target.value);
@@ -45,7 +45,7 @@ const App: React.FC = () => {
     if (text === vorbildText) {
       clearInterval(interval)
     }
-  
+
   }, [text])
   return (
     <div>
@@ -58,7 +58,7 @@ const App: React.FC = () => {
 
           <div className='flex gap-2 mt-8 py-6 items-center'>
             <p>Der Vorbild :</p>
-        
+
             <p className='text-2xl text-green-500'>{vorbildText}</p>
           </div>
         </div>
