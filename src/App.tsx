@@ -55,9 +55,9 @@ const App: React.FC = () => {
         <p className="flex bg-green-500 justify-center py-24 text-xl text-white text-center ">Der Prozess dee Typetempos wird so funktoiniert,dass mit dem Anfang des Schreibens,der wird mit dem Rechnen anfangen!!! und mit jeder Buchtabe von Nutzer/in die Richtigkeit des Schreibens wird dem/der anzeigen und überprüfen. </p>
 
         <div className="px-28 mt-4 flex flex-col gap-8 ">
-
+        <p>Der Vorbild :</p>
           <div className='flex gap-2 mt-8 py-6 items-center'>
-            <p>Der Vorbild :</p>
+           
 
             <p className='text-2xl text-green-500'>{vorbildText}</p>
           </div>
