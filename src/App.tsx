@@ -3,16 +3,18 @@ import React, { useState, useEffect } from 'react';
 
 const App: React.FC = () => {
   const [text, setText] = useState("");
+  const vorbildText = "The text to the test."
+
   const handleTextAreaChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
     setText(e.target.value);
-  };
 
+  };
   const [milliseconds, setMilliseconds] = useState<number>(0);
   const [seconds, setSeconds] = useState<number>(0);
   const [minutes, setMinutes] = useState<number>(0);
-
+  let interval: number;
   useEffect(() => {
-    let interval: number;
+
 
     if (text !== "") {
       interval = setInterval(() => {
@@ -39,6 +41,12 @@ const App: React.FC = () => {
       setMinutes((prevMinutes) => prevMinutes + 1);
     }
   }, [seconds]);
+  useEffect(() => {
+    if (text === vorbildText) {
+      clearInterval(interval)
+    }
+    console.log(text, vorbildText)
+  }, [text])
   return (
     <div>
 
@@ -47,8 +55,10 @@ const App: React.FC = () => {
         <p className="flex bg-green-500 justify-center py-24 text-xl text-white text-center ">Der Prozess dee Typetempos wird so funktoiniert,dass mit dem Anfang des Schreibens,der wird mit dem Rechnen anfangen!!! und mit jeder Buchtabe von Nutzer/in die Richtigkeit des Schreibens wird dem/der anzeigen und überprüfen. </p>
 
         <div className="px-28 mt-4 flex flex-col gap-8 ">
-          <p className="text-2xl">Der Vorbild :</p>
-          <button className="text-2xl bg-slate-200 py-4 rounded-xl mb-4">The text to the test.</button>
+
+          <div className='flex gap-2 mt-8 py-6'>
+            <p>{vorbildText}</p>
+          </div>
         </div>
       </div>
       <div className="flex flex-col gap-8">
