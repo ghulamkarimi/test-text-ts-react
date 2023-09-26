@@ -45,7 +45,7 @@ const App: React.FC = () => {
     if (text === vorbildText) {
       clearInterval(interval)
     }
-    console.log(text, vorbildText)
+  
   }, [text])
   return (
     <div>
@@ -56,8 +56,10 @@ const App: React.FC = () => {
 
         <div className="px-28 mt-4 flex flex-col gap-8 ">
 
-          <div className='flex gap-2 mt-8 py-6'>
-            <p>{vorbildText}</p>
+          <div className='flex gap-2 mt-8 py-6 items-center'>
+            <p>Der Vorbild :</p>
+        
+            <p className='text-2xl text-green-500'>{vorbildText}</p>
           </div>
         </div>
       </div>
@@ -66,7 +68,7 @@ const App: React.FC = () => {
           <textarea
             value={text}
             onChange={handleTextAreaChange}
-            className="border-4 border-slate-400 rounded-xl flex w-full outline-0 px-4"
+            className="border-4 border-slate-400 text-green-500 rounded-xl flex w-full outline-0 px-4"
             placeholder="Mit dem ersten Buchstaben fängt der Timer an."
           />
         </div>
